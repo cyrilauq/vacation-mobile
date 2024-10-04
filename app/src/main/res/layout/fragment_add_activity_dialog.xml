@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="280dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.vacation.infos.dialog_add_activity.AddActivityDialogFragment">
+
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:insetLeft="25dp"
+        android:background="@drawable/roudn_bg"
+        android:src="@drawable/close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/close_txt" />
+
+    <TextView
+        android:id="@+id/title_add_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
+        android:text="@string/add_activity_txt"
+        android:textColor="#EF6C00"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_add_activity">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/activity_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_txt"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/activity_name_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:width="250dp"
+            android:hint="@string/name_txt"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toEndOf="@+id/activity_name_label"
+            app:layout_constraintTop_toTopOf="@+id/activity_name_label"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/activity_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_txt"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_name_input" />
+
+        <EditText
+            android:id="@+id/activity_description_input"
+            android:layout_width="wrap_content"
+            android:gravity="top"
+            android:layout_marginStart="4dp"
+            android:width="250dp"
+            android:hint="@string/description_txt"
+            android:layout_height="150dp"
+            android:inputType="text|textMultiLine"
+            app:layout_constraintStart_toEndOf="@+id/activity_description_label"
+            app:layout_constraintTop_toTopOf="@+id/activity_description_label"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/activity_place_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_txt"
+            android:textSize="8pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_description_input" />
+
+        <EditText
+            android:id="@+id/activity_place_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:width="250dp"
+            android:hint="@string/place_txt"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toEndOf="@+id/activity_place_label"
+            app:layout_constraintTop_toTopOf="@+id/activity_place_label"
+            android:autofillHints="postalAddress" />
+
+        <fragment
+            android:id="@+id/map_container"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/smaller_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_place_input" />
+
+        <LinearLayout
+            android:id="@+id/activity_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/roudn_bg"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:paddingEnd="15dp"
+            app:layout_constraintCircleRadius="@dimen/big_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map_container"
+            android:focusable="true"
+            tools:ignore="RtlSymmetry">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@string/add_button" />
+
+            <TextView
+                android:id="@+id/activity_confirm_btn_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_txt"
+                android:textSize="8pt" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

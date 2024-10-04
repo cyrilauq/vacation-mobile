@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.vacation.infos.VacationFragment"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/vacation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_horizontal_margin"
+            android:fontFamily="@font/alata"
+            tools:text="Vacation Title"
+            android:textColor="@color/orange"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vacation_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/alata"
+            tools:text="fdgfdjgfdj,gf fdjg dfg fdg fdj bjk bjgk jgn jkb njkhgbkgjh."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vacation_title" />
+        <TextView
+            android:id="@+id/period_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vacation_info_duration_title"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vacation_description"/>
+        <LinearLayout
+            android:id="@+id/vacation_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/period_title">
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacation_info_from_title"/>
+                <TextView
+                    android:id="@+id/begin_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Begin date" />
+                <TextView
+                    android:id="@+id/begin_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Begin time" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacation_info_to_title" />
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="End date" />
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="End time" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/vacation_place_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vacation_period">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/vacation_info_place_title" />
+            <TextView
+                android:id="@+id/vacation_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="No mans land" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/open_map_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FD9925"
+            android:contentDescription="@string/add_members_btn_txt"
+            android:src="@drawable/map_icon"
+            android:text="@string/add_members_btn_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vacation_place_layout" />
+
+        <ImageButton
+            android:id="@+id/add_member_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FD9925"
+            android:contentDescription="@string/add_members_btn_txt"
+            android:src="@drawable/baseline_person_add_24"
+            android:text="@string/add_members_btn_txt"
+            app:layout_constraintStart_toEndOf="@+id/open_map_btn"
+            app:layout_constraintTop_toBottomOf="@+id/vacation_place_layout" />
+
+        <ImageButton
+            android:id="@+id/add_activity_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FD9925"
+            android:contentDescription="@string/add_members_btn_txt"
+            android:src="@drawable/add_vacatin_icon"
+            android:text="@string/add_members_btn_txt"
+            app:layout_constraintStart_toEndOf="@+id/add_member_btn"
+            app:layout_constraintTop_toTopOf="@+id/add_member_btn" />
+
+        <ImageButton
+            android:id="@+id/download_plnning_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FD9925"
+            android:contentDescription="@string/add_members_btn_txt"
+            android:src="@drawable/baseline_file_download_24"
+            android:text="@string/add_members_btn_txt"
+            app:layout_constraintStart_toEndOf="@+id/add_activity_btn"
+            app:layout_constraintTop_toTopOf="@+id/add_activity_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/weatherRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_btn"
+            android:visibility="gone"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:id="@+id/action_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/activities_title"
+            app:layout_constraintStart_toStartOf="@+id/activities_title"
+            app:layout_constraintTop_toBottomOf="@+id/open_map_btn" >
+            <Button
+                android:id="@+id/show_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activities_btn_txt"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:id="@+id/show_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/members_btn_txt"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:id="@+id/show_tchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tchat_title"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:id="@+id/show_weather_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather"
+                style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activities_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:fontFamily="@font/alata"
+            android:text="@string/activities_recyclerview_title"
+            android:textColor="@color/orange"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activities_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@+id/activities_title"
+            app:layout_constraintStart_toStartOf="@+id/activities_title"
+            app:layout_constraintTop_toBottomOf="@+id/activities_title" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/members_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:text="@string/members_recyclerview_title"
+            android:textColor="@color/orange"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/members_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@+id/members_title"
+            app:layout_constraintStart_toStartOf="@+id/members_title"
+            app:layout_constraintTop_toBottomOf="@+id/members_title" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/tchat_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_btn"
+            tools:layout="@layout/fragment_tchat"
+            android:visibility="gone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

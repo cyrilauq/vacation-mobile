@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380sp"
+    android:layout_height="250sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:flow_verticalAlign="center"
+    app:flow_horizontalAlign="center"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close_txt"
+        android:layout_gravity="end" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/alata"
+        android:text="@string/add_member_layout_title"
+        android:textColor="#EF6C00"
+        android:textSize="10pt" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:text="@string/search_txt" />
+
+        <EditText
+            android:id="@+id/search_member_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/search_txt"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#8D6E63" />
+        <Button
+            android:id="@+id/add_member_btn"
+            android:text="@string/add_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_member_btn"
+            android:maxWidth="40dp"
+            android:maxHeight="40dp"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:text="@string/add_txt"
+            tools:srcCompat="@drawable/baseline_search_24"
+            android:src="@drawable/baseline_search_24"
+            android:contentDescription="@string/search_btn_txt" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/members_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/error_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/members_confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_txt"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

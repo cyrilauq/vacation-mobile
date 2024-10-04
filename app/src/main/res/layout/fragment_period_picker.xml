@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.components.PeriodPickerFragment">
+
+    <TextView
+        android:id="@+id/begin_date_text_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/form_begin_date"
+        android:labelFor="@+id/begin_date_input" />
+
+    <EditText
+        android:id="@+id/begin_date_input"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/begin_time_text_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/form_begin_time"
+        android:labelFor="@+id/begin_time_input" />
+
+    <EditText
+        android:id="@+id/begin_time_input"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/end_date_text_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/form_end_date"
+        android:labelFor="@+id/end_date_input" />
+
+    <EditText
+        android:id="@+id/end_date_input"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/end_time_text_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/form_end_time"
+        android:labelFor="@+id/end_time_input" />
+
+    <EditText
+        android:id="@+id/end_time_input"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        tools:ignore="TextFields" />
+
+</LinearLayout>

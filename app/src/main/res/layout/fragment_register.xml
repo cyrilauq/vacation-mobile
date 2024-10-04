@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.register.RegisterFragment" >
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_horizontal_margin"
+        android:fontFamily="@font/alata"
+        android:text="@string/register"
+        android:textColor="@color/orange"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/registerNameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/name_txt"
+        android:inputType="text"
+        android:autofillHints="name"
+        app:layout_constraintEnd_toEndOf="@+id/registerTitle"
+        app:layout_constraintStart_toStartOf="@+id/registerTitle"
+        app:layout_constraintTop_toBottomOf="@+id/registerTitle" />
+
+    <EditText
+        android:id="@+id/register_firstname_fld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/firstname_txt"
+        android:inputType="text"
+        android:autofillHints="name"
+        app:layout_constraintEnd_toEndOf="@+id/registerNameField"
+        app:layout_constraintStart_toStartOf="@+id/registerNameField"
+        app:layout_constraintTop_toBottomOf="@+id/registerNameField" />
+
+    <EditText
+        android:id="@+id/registerLoginField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/login_txt"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:autofillHints="username"
+        app:layout_constraintEnd_toEndOf="@+id/register_firstname_fld"
+        app:layout_constraintStart_toStartOf="@+id/register_firstname_fld"
+        app:layout_constraintTop_toBottomOf="@+id/register_firstname_fld" />
+
+    <EditText
+        android:id="@+id/registerEmailField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/registerTitle"
+        app:layout_constraintStart_toStartOf="@+id/registerTitle"
+        app:layout_constraintTop_toBottomOf="@+id/registerLoginField" />
+
+    <EditText
+        android:id="@+id/registerPasswordField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/password_field"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/registerTitle"
+        app:layout_constraintStart_toStartOf="@+id/registerTitle"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmailField"
+        tools:text="@string/password_field"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/register_confirm_pwd_fld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="@string/confirm_password_fld"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/registerTitle"
+        app:layout_constraintStart_toStartOf="@+id/registerTitle"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordField"
+        tools:text="@string/password_field"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="@string/register"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordField" />
+
+    <TextView
+        android:id="@+id/registerError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
+        app:layout_constraintEnd_toEndOf="@+id/registerPasswordField"
+        app:layout_constraintStart_toStartOf="@+id/registerPasswordField"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

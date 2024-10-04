@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp">
+    <LinearLayout
+        android:id="@+id/plannify_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/plannify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment_horizontal_margin"
+            android:fontFamily="@font/alata"
+            android:text="@string/plannify_activity_title"
+            android:textColor="@color/orange"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/plannify_title"
+            app:layout_constraintTop_toBottomOf="@+id/plannify_title" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/period_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="cyril.brian.vacationmobile.ui.components.PeriodPickerFragment"
+            tools:layout="@layout/fragment_period_picker"
+            app:layout_constraintStart_toStartOf="@+id/error_message"
+            app:layout_constraintTop_toBottomOf="@+id/error_message"  />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/confirm_txt_btn"
+            app:layout_constraintStart_toStartOf="@+id/period_picker"
+            app:layout_constraintTop_toBottomOf="@+id/period_picker" />
+    </LinearLayout>
+</ScrollView>
